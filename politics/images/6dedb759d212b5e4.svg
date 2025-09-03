@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--  Created by User:Zirguezi(http://commons.wikimedia.org/wiki/User:Zirguezi) for use on Wikimedia projects. This file is released into the public domain. This applies worldwide. If this is not legally possible: I grant any entity the right to use this work for any purpose, without any conditions, unless such conditions are required by law.-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="9.79847in" height="5.98326in"
+		viewBox="0 0 705.49 430.795" xml:space="preserve" color-interpolation-filters="sRGB" class="st19">
+	<v:documentProperties v:langID="1033" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+			<v:ud v:nameU="msvWarnOnPersonalInfo" v:val="VT0(1):5"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st3 {fill:#a8d08d;stroke:#000000;stroke-width:1.5}
+		.st4 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
+		.st5 {fill:#f4b183;stroke:#000000;stroke-width:1.5}
+		.st6 {fill:#c9c9c9;stroke:#000000;stroke-width:1.5}
+		.st7 {fill:#9cc3e5;stroke:#000000;stroke-width:1.5}
+		.st8 {font-size:1em}
+		.st9 {fill:#fbe5d5;stroke:#000000;stroke-width:1.5}
+		.st10 {fill:#cc99ff;stroke:#000000;stroke-width:1.5}
+		.st11 {fill:#c55a11;stroke:#000000;stroke-width:1.5}
+		.st12 {fill:#fff2cc;stroke:#000000;stroke-width:1.5}
+		.st13 {fill:#7030a0;stroke:#000000;stroke-width:1.5}
+		.st14 {marker-end:url(#mrkr4-72);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st15 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37313432835821}
+		.st16 {fill:none;stroke:none;stroke-width:0.25}
+		.st17 {fill:#000000;font-family:Calibri;font-size:1.00001em;font-weight:bold}
+		.st18 {font-size:1em;text-decoration:underline}
+		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-72" class="st15" v:arrowType="4" v:arrowSize="2" v:setback="5.36" refX="-5.36" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.68,-2.68) "/>
+		</marker>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Page-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Connector" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(200.037,-345.505)">
+			<title>Rectangle</title>
+			<desc>Government of India</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow1-2" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st3"/>
+			<text x="4" y="414.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Government of India</text>		</g>
+		<g id="shape4-7" v:mID="4" v:groupContext="shape" transform="translate(200.037,-285.553)">
+			<title>Rectangle.4</title>
+			<desc>State Government(s)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow4-8" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st5"/>
+			<text x="4" y="414.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>State Government(s)</text>		</g>
+		<g id="shape5-13" v:mID="5" v:groupContext="shape" transform="translate(200.037,-225.6)">
+			<title>Rectangle.5</title>
+			<desc>Division(s)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow5-14" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st6"/>
+			<text x="4" y="414.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Division(s)</text>		</g>
+		<g id="shape6-19" v:mID="6" v:groupContext="shape" transform="translate(200.037,-165.647)">
+			<title>Rectangle.6</title>
+			<desc>District(s) (Zill-Parishad)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow6-20" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st7"/>
+			<text x="4" y="408.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>District(s)<v:newlineChar/><tspan x="4"
+						dy="1.2em" class="st8">(</tspan>Zill-Parishad)</text>		</g>
+		<g id="shape7-26" v:mID="7" v:groupContext="shape" transform="translate(200.037,-94.2139)">
+			<title>Rectangle.7</title>
+			<desc>Municipal Corporation(s) (Mahanagar-Palika)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow7-27" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st9"/>
+			<text x="4" y="408.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Municipal Corporation(s)<v:newlineChar/><tspan
+						x="4" dy="1.2em" class="st8">(</tspan>Mahanagar-Palika)</text>		</g>
+		<g id="shape8-33" v:mID="8" v:groupContext="shape" transform="translate(379.045,-94.2139)">
+			<title>Rectangle.8</title>
+			<desc>Municipality(s) (Nagar-Palika)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow8-34" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st10"/>
+			<text x="4" y="408.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Municipality(s)<v:newlineChar/><tspan
+						x="4" dy="1.2em" class="st8">(</tspan>Nagar-Palika)</text>		</g>
+		<g id="shape9-40" v:mID="9" v:groupContext="shape" transform="translate(542.037,-94.2139)">
+			<title>Rectangle.9</title>
+			<desc>City Council(s) (Nagar-Panchayat)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow9-41" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st11"/>
+			<text x="4" y="408.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>City Council(s)<v:newlineChar/><tspan
+						x="4" dy="1.2em" class="st8">(</tspan>Nagar-Panchayat)</text>		</g>
+		<g id="shape10-47" v:mID="10" v:groupContext="shape" transform="translate(379.045,-23.3478)">
+			<title>Rectangle.10</title>
+			<desc>Ward(s)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow10-48" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st12"/>
+			<text x="4" y="414.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Ward(s)</text>		</g>
+		<g id="shape11-53" v:mID="11" v:groupContext="shape" transform="translate(21.0294,-94.2139)">
+			<title>Rectangle.11</title>
+			<desc>Block(s) (Tehsils)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow11-54" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st13"/>
+			<text x="4" y="408.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Block(s)<v:newlineChar/><tspan x="4"
+						dy="1.2em" class="st8">(</tspan>Tehsils)</text>		</g>
+		<g id="shape12-60" v:mID="12" v:groupContext="shape" transform="translate(21.0294,-23.3478)">
+			<title>Rectangle.12</title>
+			<desc>Village(s) (Gram Panchayat)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="411.448" width="141.74" height="38.6929"/>
+			<g id="shadow12-61" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="392.102" width="141.732" height="38.6929" class="st2"/>
+			</g>
+			<rect x="0" y="392.102" width="141.732" height="38.6929" class="st13"/>
+			<text x="4" y="408.45" class="st4" v:langID="1043"><v:paragraph/><v:tabList/>Village(s)<v:newlineChar/><tspan x="4"
+						dy="1.2em" class="st8">(</tspan>Gram Panchayat)</text>		</g>
+		<g id="shape13-67" v:mID="13" v:groupContext="shape" v:layerMember="0" transform="translate(263.817,-345.505)">
+			<title>Dynamic connector</title>
+			<path d="M7.09 430.79 L7.09 444.01" class="st14"/>
+		</g>
+		<g id="shape14-73" v:mID="14" v:groupContext="shape" v:layerMember="0" transform="translate(263.817,-285.553)">
+			<title>Dynamic connector.14</title>
+			<path d="M7.09 430.79 L7.09 444.01" class="st14"/>
+		</g>
+		<g id="shape15-78" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(263.817,-225.6)">
+			<title>Dynamic connector.15</title>
+			<path d="M7.09 430.79 L7.09 444.01" class="st14"/>
+		</g>
+		<g id="shape16-83" v:mID="16" v:groupContext="shape" v:layerMember="0" transform="translate(200.037,-184.993)">
+			<title>Dynamic connector.16</title>
+			<path d="M0 430.79 L-108.14 430.79 L-108.14 474.84" class="st14"/>
+		</g>
+		<g id="shape17-88" v:mID="17" v:groupContext="shape" v:layerMember="0" transform="translate(84.8089,-94.2139)">
+			<title>Dynamic connector.17</title>
+			<path d="M7.09 430.79 L7.09 454.93" class="st14"/>
+		</g>
+		<g id="shape18-93" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(263.817,-165.647)">
+			<title>Dynamic connector.18</title>
+			<path d="M7.09 430.79 L7.09 455.49" class="st14"/>
+		</g>
+		<g id="shape19-98" v:mID="19" v:groupContext="shape" v:layerMember="0" transform="translate(270.903,-165.647)">
+			<title>Dynamic connector.19</title>
+			<path d="M0 430.79 L0 441.42 L179.01 441.42 L179.01 455.49" class="st14"/>
+		</g>
+		<g id="shape20-103" v:mID="20" v:groupContext="shape" v:layerMember="0" transform="translate(270.903,-165.647)">
+			<title>Dynamic connector.20</title>
+			<path d="M0 430.79 L0 441.42 L342 441.42 L342 455.49" class="st14"/>
+		</g>
+		<g id="shape21-108" v:mID="21" v:groupContext="shape" v:layerMember="0" transform="translate(270.903,-94.2139)">
+			<title>Dynamic connector.21</title>
+			<path d="M0 430.79 L0 482.31 L100.1 482.31" class="st14"/>
+		</g>
+		<g id="shape22-113" v:mID="22" v:groupContext="shape" v:layerMember="0" transform="translate(442.825,-94.2139)">
+			<title>Dynamic connector.22</title>
+			<path d="M7.09 430.79 L7.09 454.93" class="st14"/>
+		</g>
+		<g id="shape23-118" v:mID="23" v:groupContext="shape" v:layerMember="0" transform="translate(612.903,-94.2139)">
+			<title>Dynamic connector.23</title>
+			<path d="M0 430.79 L0 482.31 L-84.09 482.31" class="st14"/>
+		</g>
+		<g id="shape24-123" v:mID="24" v:groupContext="shape" transform="translate(167.439,-389.867)">
+			<title>Sheet.24</title>
+			<desc>Administrative structure of India</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="101.339" cy="419.456" width="202.68" height="22.6772"/>
+			<rect x="0" y="408.117" width="202.677" height="22.6772" class="st16"/>
+			<text x="19.99" y="423.06" class="st17" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/><tspan class="st18">Administrative structure of India</tspan></text>		</g>
+	</g>
+</svg>
