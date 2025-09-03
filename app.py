@@ -7,7 +7,8 @@ from typing import List, Dict
 
 # ---- Paths (repo-relative by default) ----
 APP_DIR = pathlib.Path(__file__).parent.resolve()
-DEFAULT_BASE = APP_DIR / "data" / "wiki-data-samples"   # put samples here in the repo
+DEFAULT_BASE = APP_DIR   # Use repository root as base
+
 
 # allow override via Streamlit secrets or env
 BASE_STR = st.secrets.get("DATA_BASE", os.environ.get("DATA_BASE", str(DEFAULT_BASE)))
