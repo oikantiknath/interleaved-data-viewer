@@ -1,25 +1,23 @@
 #!/usr/bin/env python3
-import os, re, json, pathlib, base64
+import os, json, pathlib, base64
 import streamlit as st
 import streamlit.components.v1 as components
 from bs4 import BeautifulSoup
 from typing import List, Dict
 
-# ---- Paths (repo-relative by default) ----
+# ---------- Paths ----------
 APP_DIR = pathlib.Path(__file__).parent.resolve()
-DEFAULT_BASE = APP_DIR   # Use repository root as base
-
-
-# allow override via Streamlit secrets or env
+# Your repo has domain folders at the root (culture/, demography/, ...):
+DEFAULT_BASE = APP_DIR  # <— IMPORTANT: repo root
 BASE_STR = st.secrets.get("DATA_BASE", os.environ.get("DATA_BASE", str(DEFAULT_BASE)))
 BASE = pathlib.Path(BASE_STR).resolve()
 
-ORIG_PREFIX = pathlib.Path("/data/oikantik_sarvam_ai/wiki-data")  # only used for rewrites
-LOCAL_BASE = BASE  # rewrite original absolute image paths to this local base
+ORIG_PREFIX = pathlib.Path("/data/oikantik_sarvam_ai/wiki-data")
+LOCAL_BASE = BASE
 
 st.set_page_config(page_title="Wiki Samples Viewer", layout="wide")
 
-# --- Helpers ---
+# ---------- Helpers ----------
 def fix_image_path(path: str) -> pathlib.Path:
     try:
         p = pathlib.Path(path)
@@ -31,14 +29,19 @@ def fix_image_path(path: str) -> pathlib.Path:
         return pathlib.Path(path)
 
 @st.cache_data
-def list_domains() -> List[str]:
-    if not BASE.exists():
+def list_domains(base: pathlib.Path) -> List[str]:
+    if not base.exists():
         return []
-    return sorted([p.name for p in BASE.iterdir() if p.is_dir()])
+    # domains are top-level folders that contain at least a markdown/ subfolder
+    out = []
+    for p in sorted([q for q in base.iterdir() if q.is_dir()]):
+        if (p / "markdown").exists() or (p / "text").exists() or (p / "html").exists():
+            out.append(p.name)
+    return out
 
 @st.cache_data
-def list_langs(domain: str) -> List[str]:
-    d = BASE / domain
+def list_langs(base: pathlib.Path, domain: str) -> List[str]:
+    d = base / domain
     langs = set()
     for sub in ("markdown", "html", "text"):
         p = d / sub
@@ -49,17 +52,17 @@ def list_langs(domain: str) -> List[str]:
     return sorted(langs)
 
 @st.cache_data
-def list_articles(domain: str, lang: str) -> List[str]:
-    d = BASE / domain
+def list_articles(base: pathlib.Path, domain: str, lang: str) -> List[str]:
+    d = base / domain
     html_stems = {p.stem for p in (d / "html" / lang).glob("*.html")} | {
         p.stem for p in (d / "html" / lang).glob("*.htm")
     }
     md_stems = {p.stem for p in (d / "markdown" / lang).glob("*.md")}
-    return sorted(html_stems & md_stems)
+    return sorted(html_stems & md_stems) if html_stems else sorted(md_stems)
 
 @st.cache_data
-def load_paths(domain: str, lang: str, stem: str) -> Dict[str, pathlib.Path]:
-    d = BASE / domain
+def load_paths(base: pathlib.Path, domain: str, lang: str, stem: str) -> Dict[str, pathlib.Path]:
+    d = base / domain
     html = d / "html" / lang / f"{stem}.html"
     if not html.exists():
         html = d / "html" / lang / f"{stem}.htm"
@@ -91,12 +94,9 @@ def img_to_data_uri(p: pathlib.Path) -> str | None:
         return None
     suffix = p.suffix.lower()
     mime = (
-        "image/jpeg"
-        if suffix in (".jpg", ".jpeg")
-        else "image/png"
-        if suffix == ".png"
-        else "image/gif"
-        if suffix == ".gif"
+        "image/jpeg" if suffix in (".jpg", ".jpeg")
+        else "image/png" if suffix == ".png"
+        else "image/gif" if suffix == ".gif"
         else "application/octet-stream"
     )
     b64 = base64.b64encode(p.read_bytes()).decode("ascii")
@@ -105,7 +105,7 @@ def img_to_data_uri(p: pathlib.Path) -> str | None:
 def render_blocks_as_html(rec) -> str:
     css = """
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.55; }
+      body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.55; }
       .pane { height: 900px; overflow:auto; padding-right: 8px; }
       h1,h2,h3,h4 { margin: 0.6rem 0 0.4rem; }
       p { margin: 0.5rem 0; }
@@ -138,12 +138,10 @@ def render_blocks_as_html(rec) -> str:
             if len(lines) - start >= 2:
                 header = [c.strip() for c in lines[start].strip("| ").split("|")]
                 html.append("<table><thead><tr>" + "".join(f"<th>{c}</th>" for c in header) + "</tr></thead><tbody>")
-                for ln in lines[start + 2 :]:
+                for ln in lines[start + 2:]:
                     cells = [c.strip() for c in ln.strip("| ").split("|")]
-                    if len(cells) < len(header):
-                        cells += [""] * (len(header) - len(cells))
-                    if len(cells) > len(header):
-                        cells = cells[: len(header)]
+                    if len(cells) < len(header): cells += [""] * (len(header) - len(cells))
+                    if len(cells) > len(header): cells = cells[:len(header)]
                     html.append("<tr>" + "".join(f"<td>{c}</td>" for c in cells) + "</tr>")
                 html.append("</tbody></table>")
         elif typ == "image":
@@ -161,31 +159,43 @@ def render_blocks_as_html(rec) -> str:
     html.append("</div>")
     return css + "\n".join(html)
 
-# --- UI ---
+# ---------- UI ----------
 st.title("🗂️ Wiki Samples Viewer")
 
-domains = list_domains()
+# Debug panel (helps confirm what Cloud sees)
+with st.sidebar:
+    st.caption("Data root (BASE)")
+    st.code(str(BASE))
+    if BASE.exists():
+        # show first few subdirs
+        subdirs = [p.name for p in BASE.iterdir() if p.is_dir()]
+        st.caption("Top-level folders found:")
+        st.write(subdirs[:15])
+
+domains = list_domains(BASE)
 if not domains:
-    st.error(f"No data found at `{BASE}`. Add sample data to `data/wiki-data-samples/` or set `DATA_BASE` in secrets.")
+    st.error(
+        f"No domain folders found at:\n`{BASE}`\n\n"
+        "Your repo layout should have top-level folders like `culture/`, `demography/`, etc.\n"
+        "If your data is elsewhere, set `DATA_BASE` in Secrets to that path."
+    )
     st.stop()
 
 c0, c1, c2 = st.columns([1, 1, 2], gap="small")
 with c0:
     domain = st.selectbox("Domain", options=domains, index=0)
-langs = list_langs(domain)
+langs = list_langs(BASE, domain)
 if not langs:
-    st.warning("No language folders in selected domain.")
-    st.stop()
+    st.warning("No language folders in selected domain."); st.stop()
 with c1:
     lang = st.selectbox("Language", options=langs, index=0)
-articles = list_articles(domain, lang)
+articles = list_articles(BASE, domain, lang)
 if not articles:
-    st.warning("No overlapping HTML+Markdown articles for this domain/lang.")
-    st.stop()
+    st.warning("No articles found for this domain/lang."); st.stop()
 with c2:
     stem = st.selectbox("Article", options=articles, index=0)
 
-paths = load_paths(domain, lang, stem)
+paths = load_paths(BASE, domain, lang, stem)
 
 left, right = st.columns(2, gap="large")
 
@@ -217,11 +227,9 @@ with right:
     else:
         md_text = paths["md"].read_text(encoding="utf-8", errors="ignore")
         components.html(
-            f"""
-            <div style="height:900px; overflow:auto; border:1px solid #ddd; padding:8px; white-space:pre-wrap; font-family:monospace">
-                {md_text.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")}
-            </div>
-            """,
+            f"""<div style="height:900px; overflow:auto; border:1px solid #ddd; padding:8px; white-space:pre-wrap; font-family:monospace">
+            {md_text.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")}
+            </div>""",
             height=900,
             scrolling=False,
         )
